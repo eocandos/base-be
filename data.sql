@@ -1,6 +1,6 @@
-CREATE DATABASE testdb3;
+CREATE DATABASE testdb5;
 
-\c testdb2;
+\c testdb5;
 
 CREATE TABLE task (
 	task_id serial PRIMARY KEY,

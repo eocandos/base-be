@@ -1,4 +1,4 @@
-package com.apiux.tasklists.api.entity;
+package com.apiux.tasklists.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

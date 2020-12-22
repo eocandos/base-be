@@ -19,7 +19,6 @@ public class TaskController {
     @RequestMapping("/tasks")
     public ResponseEntity getAll() {
         return ResponseEntity.ok(taskService.findAll());
-        // return "Hello World Spring Boot!";
     }
 
     @PostMapping("/task")
@@ -27,4 +26,9 @@ public class TaskController {
         return taskService.save(task);
     }
 
+    @DeleteMapping("/task/{id}")
+    public ResponseEntity delete(@PathVariable("id") Long taskId) {
+        taskService.delete(taskId);
+        return ResponseEntity.ok().build();
+    }
 }

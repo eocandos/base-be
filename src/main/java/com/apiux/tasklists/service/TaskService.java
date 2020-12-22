@@ -12,5 +12,7 @@ public interface TaskService {
 
     Task update(Task task);
 
+    Task setState(Long taskId);
+
     void delete(Long taskId);
 }

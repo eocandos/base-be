@@ -4,7 +4,6 @@ import com.apiux.tasklists.entity.Task;
 import com.apiux.tasklists.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RestController;
 
 import org.springframework.boot.autoconfigure.*;
@@ -36,6 +35,10 @@ public class TaskController {
         return ResponseEntity.ok(taskService.update(task));
     }
 
+    @PutMapping("/task/{id}/change-state")
+    public ResponseEntity changeState(@PathVariable("id") Long taskId) {
+         return ResponseEntity.ok(taskService.setState(taskId));
+    }
 
     @DeleteMapping("/task/{id}")
     public ResponseEntity delete(@PathVariable("id") Long taskId) {

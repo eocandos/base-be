@@ -26,6 +26,8 @@ public class Task implements Serializable {
 
     private String taskDescription;
 
+    private boolean active = true;
+
     @CreationTimestamp
     private Date createTime;
     @UpdateTimestamp

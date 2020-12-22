@@ -32,7 +32,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\r\n        \"taskName\": \"Sacar a Dante\",\r\n        \"taskDescription\": \"t\",\r\n        \"createTime\": \"2018-03-10T04:03:26.000+0000\",\r\n        \"updateTime\": \"2018-03-10T05:15:27.000+0000\"\r\n    }",
+					"raw": "    {\r\n        \"taskName\": \"Comprar carne 2\",\r\n        \"taskDescription\": \"La carne de res para asar\",\r\n        \"createTime\": \"2018-03-10T04:03:26.000+0000\",\r\n        \"updateTime\": \"2018-03-10T05:15:27.000+0000\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -70,6 +70,59 @@
 						"api",
 						"task",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit task by Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"taskName\": \"Ejercicio 3\",\r\n        \"taskDescription\": \"Jugar Tenis\",\r\n        \"active\": true,\r\n        \"createTime\": \"2018-03-10T04:03:26.000+0000\",\r\n        \"updateTime\": \"2018-03-10T05:15:27.000+0000\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/task/0/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"task",
+						"0",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change state at task by Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/task/1/change-state",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"task",
+						"1",
+						"change-state"
 					]
 				}
 			},

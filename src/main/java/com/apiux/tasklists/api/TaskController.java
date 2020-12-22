@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @EnableAutoConfiguration
 public class TaskController {
@@ -18,7 +19,7 @@ public class TaskController {
     @Autowired
     TaskService taskService;
 
-    @RequestMapping("/tasks")
+    @RequestMapping("/task")
     public ResponseEntity getAll() {
         return ResponseEntity.ok(taskService.findAll());
     }

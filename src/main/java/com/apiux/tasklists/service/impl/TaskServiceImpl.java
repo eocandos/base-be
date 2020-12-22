@@ -32,6 +32,12 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
+    @Transactional
+    public Task update(Task task) {
+        return taskRepository.save(task);
+    }
+
+    @Override
     public void delete(Long taskId) {
         Task task = findOne(taskId);
         if (task == null) throw new MyException(ResultEnum.TASK_NOT_EXIST);

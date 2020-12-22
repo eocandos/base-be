@@ -10,5 +10,7 @@ public interface TaskService {
 
     Task save(Task task);
 
+    Task update(Task task);
+
     void delete(Long taskId);
 }

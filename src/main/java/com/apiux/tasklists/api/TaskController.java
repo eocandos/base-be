@@ -24,6 +24,11 @@ public class TaskController {
         return ResponseEntity.ok(taskService.findAll());
     }
 
+    @GetMapping("/task/{taskId}")
+    public ResponseEntity showOne(@PathVariable("taskId") Long taskId) {
+        return ResponseEntity.ok(taskService.findOne(taskId));
+    }
+
     @PostMapping("/task")
     public Task create(@RequestBody Task task) {
         return taskService.save(task);

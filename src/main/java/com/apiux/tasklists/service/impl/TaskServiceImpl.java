@@ -18,7 +18,7 @@ public class TaskServiceImpl implements TaskService {
     TaskRepository taskRepository;
 
     public List<Task> findAll() {
-        return taskRepository.findAll();
+        return taskRepository.findAllByOrderByUpdateTimeDesc();
     }
 
     public Task findOne(Long id) {

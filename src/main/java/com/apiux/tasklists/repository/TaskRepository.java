@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface TaskRepository extends JpaRepository<Task, Long> {
 
-    List<Task> findAll();
+    List<Task> findAllByOrderByUpdateTimeDesc();
 
     Task findByTaskId(Long id);
 

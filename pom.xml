@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>co.com</groupId>
-	<artifactId>pt-api</artifactId>
+	<artifactId>task-lists-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>pt-api</name>
-	<description>Private Tender API Server</description>
+	<name>task-lists-api</name>
+	<description>Task Lists for API UX</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
